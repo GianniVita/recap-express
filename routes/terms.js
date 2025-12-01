@@ -1,38 +1,28 @@
 
 const express = require('express')
+const terms = require('../data/terms')
 const router = express.Router()
 
 
 //index
-router.get('/', (req,res) => {
-    res.send('Show all terms here')
-})
+router.get('/', termsController.index)
 
 
 //show
-router.get('/:id', (req,res) => {
-    res.send('show tern id' + req.params.id)
-})
+router.get('/:id', termsController.show)
 
 //store
 
-router.post('/:id', (req, res) => {
-    console.log(req.body);
-    res.send('show tern id' + req.params.id)
-})
+router.post('/:id', termsController.store)
 
 
 
 //update
-router.put('/:id', (req, res) => {
-    res.send('store tern id' + req.params.id)
-})
+router.put('/:id', termsController.update)
     
     
 //destroy
-router.delete('/:id', (req, res) => {
-    res.send('update tern id' + req.params.id)
-})
+router.delete('/:id', termsController.destroy)
 
 //Export your router instance
 module.exports = router
