@@ -14,7 +14,7 @@ router.get('/:id', termsController.show)
 
 //store
 
-router.post('/:id', termsController.store)
+router.post('/', termsController.store)
 
 
 

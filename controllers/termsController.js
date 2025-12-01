@@ -30,8 +30,27 @@ const show = (req, res) => {
 
 const store =  (req, res) => {
     console.log(req.body);
-    res.send('show term id' + req.params.id)
+    const {term,definition} = req.body
+    // contruct a new obj literal to hold the ne obj value
+    const newTerm = {
+        id: Date.now(),
+        term,
+        definition
+    }
+
+    console.log(newTerm);
+    // push the obj into the array
+    terms.push(newTerm)
+    console.log(terms);
+    
+
+    res.status(201).json(newTerm)
+    
 }
+
+
+
+    
 
 const update = (req, res) => {
     res.send('store term id' + req.params.id)
