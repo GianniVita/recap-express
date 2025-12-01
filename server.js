@@ -5,7 +5,7 @@ const termsRouter = require('./routes/terms')
 //Register the static assets midlleware
 app.use(express.static('public'))
 // Register the body parser  middleware
-app.use(axpress.json())
+app.use(express.json())
 
 
 
