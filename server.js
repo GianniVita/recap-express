@@ -3,7 +3,7 @@ const app = express()
 const PORT = 3000
 const termsRouter = require('./routes/terms')
 const serverError = require('./middlewares/serverError')
-const notFound = require('./middlewares/notFound ')
+const notFound = require('./middlewares/notFound')
 //Register the static assets midlleware
 app.use(express.static('public'))
 // Register the body parser  middleware
