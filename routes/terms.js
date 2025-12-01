@@ -1,7 +1,8 @@
-
 const express = require('express')
-const terms = require('../data/terms')
 const router = express.Router()
+const termsController = require('../controllers/termsController')
+
+
 
 
 //index
